@@ -83,19 +83,12 @@ title="{{ .Site.Title }}" /> {{ end }}
 "extra-head.html" . }} {{- end }}
 
 <!-- Google Analytics internal template -->
-<<<<<<< HEAD {{- if .Site.Config.Services.GoogleAnalytics.ID }} {{ template
-"_internal/google_analytics.html" . }} {{- end }}
+
+{{- if .Site.Config.Services.GoogleAnalytics.ID }} {{ template
+"_internal/google_analytics.html" . }} {{- end}}
 
 <!-- Plausible.io -->
 {{- if $.Site.Params.plausibleDataDomain }}
-<script
-  defer
-  data-domain="{{ .Site.Params.plausibleDataDomain }}"
-  src="{{ .Site.Params.plausibleScriptSource }}"
-></script>
-{{- end }} {{- if .Site.GoogleAnalytics }} {{ template
-"_internal/google_analytics.html" . }} {{- end }}
-
 <script
   defer
   data-domain="{{ .Site.Params.plausibleDataDomain }}"
@@ -150,4 +143,4 @@ title="{{ .Site.Title }}" /> {{ end }}
     }
   })();
 </script>
-{{- end }} >>>>>>> ef8403f (add intercom config)
+{{- end }}
