@@ -82,8 +82,8 @@ title="{{ .Site.Title }}" /> {{ end }}
 {{- if templates.Exists "partials/extra-head.html" -}} {{ partial
 "extra-head.html" . }} {{- end }}
 
-{{- if .Site.GoogleAnalytics }}
+{{- if .Site.Config.Services.GoogleAnalytics.ID }}
 {{ template "_internal/google_analytics.html" . }}
 {{- end}}
 
-{{- end}} {{ partial "devicon_extended_head" . }}
+{{ partial "devicon_extended_head" . }}
